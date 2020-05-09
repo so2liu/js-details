@@ -1,0 +1,6 @@
+{
+  "eslint.validate": ["javascript", "javascriptreact", "typescript"],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "MarkdownPaste.path": "./img/"
+}

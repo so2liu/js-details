@@ -1,0 +1,26 @@
+{
+  "name": "js-details",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "so2liu <so2liu@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.150",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-alloy": "^3.7.1",
+    "nodemon": "^2.0.3",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "eslint": "eslint . --ext .ts",
+    "node": "ts-node index.ts",
+    "nodemon": "nodemon index.ts -e ts --watch src"
+  }
+}
