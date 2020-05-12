@@ -94,6 +94,25 @@ function mergeSort(array: number[]): number[] {
   return sort(mergeSort(array.slice(start, mid)), mergeSort(array.slice(mid, end)));
 }
 
-function mergeSort2(array: number[]): void {}
+function sort2(array: number[], start: number, mid: number, end: number): void {
+  let leftIndex = start;
+  let rightIndex = mid;
+  while (rightIndex > leftIndex) {
+    if (array[leftIndex] > array[rightIndex]) {
+      array.splice(leftIndex, 0, array[rightIndex]);
+      array.splice(rightIndex + 1, 1);
+      rightIndex++;
+    }
+    leftIndex++;
+  }
+}
 
-console.log(mergeSort(array));
+function mergeSort2(array: number[], start: number, end: number): void {
+  if (end - start <= 1) return;
+  const mid = Math.floor((start + end) / 2);
+  mergeSort2(array, start, mid);
+  mergeSort2(array, mid, end);
+  sort2(array, start, mid, end);
+}
+mergeSort2(array, 0, array.length);
+console.log(array);
